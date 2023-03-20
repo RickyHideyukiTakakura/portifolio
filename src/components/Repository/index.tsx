@@ -7,14 +7,15 @@ import { RepositoryStyles } from './styles'
 interface IRepository {
   name: string
   description: string
-  star: number
-  branch: number
+  html_url: string
+  stars: number
+  forks: number
   language: string
 }
 
 export function Repository(props: IRepository) {
   return (
-    <RepositoryStyles>
+    <RepositoryStyles target="_blank" href={props.html_url}>
       <div>
         <img src={folderIcon} alt="" />
         <span>{props.name}</span>
@@ -23,9 +24,9 @@ export function Repository(props: IRepository) {
       <div>
         <div>
           <img src={starIcon} alt="" />
-          <span>{props.star}</span>
+          <span>{props.stars}</span>
           <img src={branchIcon} alt="" />
-          <span>{props.branch}</span>
+          <span>{props.forks}</span>
         </div>
         <div>
           <img src={ellipseIcon} alt="" />

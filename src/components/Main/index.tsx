@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react'
 import { PostCard } from '../PostCard'
 import { Repository } from '../Repository'
 import { Card, MainStyles, MultipleCard } from './styles'
 
+interface IRepositories {
+  id: number
+  name: string
+  description: string
+  html_url: string
+  stargazers_count: number
+  forks: number
+  language: string
+}
+
 export function Main() {
+  const [reposistories, setRepositories] = useState<IRepositories[]>([])
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/RickyHideyukiTakakura/repos')
+      .then(response => response.json())
+      .then(data => setRepositories(data))
+  }, [])
+
   return (
     <MainStyles>
       <Card>
@@ -14,42 +33,17 @@ export function Main() {
         </div>
       </Card>
       <MultipleCard>
-        <Card>
+        {reposistories.map(repository => (
           <Repository
-            name="NLW OriginSix"
-            description="Projeto desenvolvido na semana nlw da rocketseat"
-            star={100}
-            branch={100}
-            language="Javascript"
+            key={repository.id}
+            name={repository.name}
+            description={repository.description}
+            html_url={repository.html_url}
+            stars={repository.stargazers_count}
+            forks={repository.forks}
+            language={repository.language}
           />
-        </Card>
-        <Card>
-          <Repository
-            name="ui-twitter"
-            description="Projeto desenvolvido na masterclass reactjs da rocketseat"
-            star={100}
-            branch={100}
-            language="Typescript"
-          />
-        </Card>
-        <Card>
-          <Repository
-            name="Ecommerce (Client)"
-            description="Projeto desenvolvido na disciplina de Desenvolvimento Web (Cliente) na UTFPR"
-            star={100}
-            branch={100}
-            language="Javascript"
-          />
-        </Card>
-        <Card>
-          <Repository
-            name="Rocketflix"
-            description="Projeto desenvolvido no desafio discover rocketseat"
-            star={100}
-            branch={100}
-            language="Javascript"
-          />
-        </Card>
+        ))}
       </MultipleCard>
       <Card>
         <strong>Recents Posts</strong>

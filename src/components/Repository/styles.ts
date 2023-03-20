@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
-export const RepositoryStyles = styled.div`
+export const RepositoryStyles = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--bg-cards);
+
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 30px;
   gap: 20px;
-  height: 100%;
 
   > div:first-child {
     display: flex;
