@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const InfoStyle = styled.li`
   a {
@@ -10,4 +10,4 @@ export const InfoStyle = styled.li`
     font-weight: 400;
     line-height: 16px;
   }
-`
+`;

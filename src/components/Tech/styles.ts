@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const TechStyles = styled.ul`
   list-style: none;
@@ -20,4 +20,4 @@ export const TechStyles = styled.ul`
     align-items: center;
     justify-content: center;
   }
-`
+`;

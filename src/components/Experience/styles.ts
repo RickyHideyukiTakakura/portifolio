@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const CardListItem = styled.li`
   margin-left: 20px;
@@ -20,4 +20,4 @@ export const CardListItem = styled.li`
     font-size: 12px;
     line-height: 15.08px;
   }
-`
+`;

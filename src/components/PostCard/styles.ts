@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PostStyles = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const PostStyles = styled.div`
     height: 128px;
     border-radius: 9999px;
   }
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -46,4 +46,4 @@ export const Content = styled.div`
       line-height: 18px;
     }
   }
-`
+`;

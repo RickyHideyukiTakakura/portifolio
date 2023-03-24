@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ListInfoStyle = styled.ul`
   list-style: none;
@@ -6,4 +6,4 @@ export const ListInfoStyle = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`
+`;

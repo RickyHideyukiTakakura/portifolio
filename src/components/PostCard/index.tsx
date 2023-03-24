@@ -1,4 +1,4 @@
-import { Content, PostStyles } from './styles'
+import { Content, PostStyles } from './styles';
 
 export function PostCard() {
   return (
@@ -19,5 +19,5 @@ export function PostCard() {
         </div>
       </Content>
     </PostStyles>
-  )
+  );
 }

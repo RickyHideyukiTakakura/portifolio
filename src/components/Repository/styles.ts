@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Repository = styled.a`
   display: flex;
@@ -42,4 +42,4 @@ export const Repository = styled.a`
       line-height: 18px;
     }
   }
-`
+`;

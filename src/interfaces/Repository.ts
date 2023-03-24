@@ -1,11 +1,11 @@
 interface Repository {
-  id: number
-  name: string
-  description: string
-  html_url: string
-  stargazers_count: number
-  forks: number
-  language: string
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+  stargazers_count: number;
+  forks: number;
+  language: string;
 }
 
-export default Repository
+export default Repository;

@@ -6,7 +6,7 @@ export const experiences = [
   },
   { company: 'UTFPR', project: 'Ecommerce (Client)', date: '2021' },
   { company: 'Rocketseat', project: 'NLW OriginSix', date: '2022' }
-]
+];
 
 export const educations = [
   {
@@ -20,4 +20,4 @@ export const educations = [
     date: '2018'
   },
   { company: 'OneBit Code', project: 'Curso FullStack', date: '2022' }
-]
+];

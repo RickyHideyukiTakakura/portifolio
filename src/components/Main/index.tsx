@@ -1,14 +1,14 @@
-import { PostCard } from '../PostCard'
-import { MainStyles } from './styles'
-import Card, { CardBody } from '../Card'
+import { PostCard } from '../PostCard';
+import { MainStyles } from './styles';
+import Card, { CardBody } from '../Card';
 
-import * as S from './styles'
-import ProjectList from '../ProjectsList'
+import * as S from './styles';
+import ProjectList from '../ProjectsList';
 
-import useRepositories from '../../hooks/useRepositories'
+import useRepositories from '../../hooks/useRepositories';
 
 export function Main() {
-  const { repositories } = useRepositories()
+  const { repositories } = useRepositories();
 
   return (
     <MainStyles>
@@ -24,5 +24,5 @@ export function Main() {
         </CardBody>
       </Card>
     </MainStyles>
-  )
+  );
 }

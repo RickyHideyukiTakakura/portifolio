@@ -1,9 +1,9 @@
-import locationIcon from '../../assets/map-pin.svg'
-import briefIcon from '../../assets/briefcase.svg'
-import githubIcon from '../../assets/github.svg'
-import instagramIcon from '../../assets/instagram.svg'
-import linkedinIcon from '../../assets/linkedin.svg'
-import mailIcon from '../../assets/mail.svg'
+import locationIcon from '../../assets/map-pin.svg';
+import briefIcon from '../../assets/briefcase.svg';
+import githubIcon from '../../assets/github.svg';
+import instagramIcon from '../../assets/instagram.svg';
+import linkedinIcon from '../../assets/linkedin.svg';
+import mailIcon from '../../assets/mail.svg';
 
 export const contacts = [
   {
@@ -36,4 +36,4 @@ export const contacts = [
     icon: mailIcon,
     title: 'rickytakakura@outlook.com'
   }
-]
+];

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Profile = styled.div`
   display: flex;
@@ -29,4 +29,4 @@ export const Profile = styled.div`
     font-weight: 300;
     line-height: 16px;
   }
-`
+`;

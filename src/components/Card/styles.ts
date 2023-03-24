@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Card = styled.div`
   background: var(--bg-cards);
@@ -6,7 +6,7 @@ export const Card = styled.div`
   height: auto;
   border-radius: 20px;
   margin-bottom: 30px;
-`
+`;
 
 export const CardHeader = styled.strong`
   display: block;
@@ -14,8 +14,8 @@ export const CardHeader = styled.strong`
   font-size: 20px;
   line-height: 25.14px;
   padding: 30px 20px 0 20px;
-`
+`;
 
 export const CardBody = styled.div`
   padding: 30px;
-`
+`;
