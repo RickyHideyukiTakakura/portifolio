@@ -1,19 +1,19 @@
-import { ExperienceStyle } from './styles'
+import * as S from './styles'
 
-interface IExperience {
+interface ICardListItem {
   company: string
   project: string
   date: string
 }
 
-export function Experience(props: IExperience) {
+export function CardListItem(props: ICardListItem) {
   return (
-    <ExperienceStyle>
+    <S.CardListItem>
       <a href="#">
         <p>{props.company}</p>
         <p>{props.project}</p>
         <p>{props.date}</p>
       </a>
-    </ExperienceStyle>
+    </S.CardListItem>
   )
 }

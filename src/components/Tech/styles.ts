@@ -5,7 +5,6 @@ export const TechStyles = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  padding: 0 30px 30px 30px;
 
   li {
     background: var(--bg-techs);

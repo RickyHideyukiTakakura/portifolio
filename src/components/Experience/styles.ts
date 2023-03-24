@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const ExperienceStyle = styled.li`
+export const CardListItem = styled.li`
+  margin-left: 20px;
+
   p:nth-child(1) {
     font-weight: 700;
     font-size: 14px;

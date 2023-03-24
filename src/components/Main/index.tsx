@@ -1,55 +1,27 @@
-import { useEffect, useState } from 'react'
 import { PostCard } from '../PostCard'
-import { Repository } from '../Repository'
-import { Card, MainStyles, MultipleCard } from './styles'
+import { MainStyles } from './styles'
+import Card, { CardBody } from '../Card'
 
-interface IRepositories {
-  id: number
-  name: string
-  description: string
-  html_url: string
-  stargazers_count: number
-  forks: number
-  language: string
-}
+import * as S from './styles'
+import ProjectList from '../ProjectsList'
+
+import useRepositories from '../../hooks/useRepositories'
 
 export function Main() {
-  const [reposistories, setRepositories] = useState<IRepositories[]>([])
-
-  useEffect(() => {
-    fetch('https://api.github.com/users/RickyHideyukiTakakura/repos')
-      .then(response => response.json())
-      .then(data => setRepositories(data))
-  }, [])
+  const { repositories } = useRepositories()
 
   return (
     <MainStyles>
+      <ProjectList repositories={repositories} />
+
       <Card>
-        <div className="my-projects">
-          <strong>My Projects</strong>
-          <a target="_blank" href="https://github.com/rickyhideyukitakakura">
-            Veja todos
-          </a>
-        </div>
+        <S.CardHeader>Recents Posts</S.CardHeader>
       </Card>
-      <MultipleCard>
-        {reposistories.map(repository => (
-          <Repository
-            key={repository.id}
-            name={repository.name}
-            description={repository.description}
-            html_url={repository.html_url}
-            stars={repository.stargazers_count}
-            forks={repository.forks}
-            language={repository.language}
-          />
-        ))}
-      </MultipleCard>
+
       <Card>
-        <strong>Recents Posts</strong>
-      </Card>
-      <Card>
-        <PostCard />
+        <CardBody>
+          <PostCard />
+        </CardBody>
       </Card>
     </MainStyles>
   )

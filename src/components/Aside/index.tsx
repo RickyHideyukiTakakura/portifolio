@@ -1,65 +1,42 @@
-import { Experience } from '../Experience'
-import { ListInfo } from '../ListInfo'
+import Card, { CardHeader, CardBody } from '../Card'
+import CardList from '../CardList'
+import ContactInfoCard from '../ContactInfoCard'
+import ProfileCard from '../ProfileCard'
 import { Tech } from '../Tech'
-import { Card, Container, ExperienceListStyle, Profile } from './styles'
+import { educations, experiences } from './data'
+import * as S from './styles'
 
 export function Aside() {
   return (
-    <Container>
+    <S.Container>
+      <ProfileCard
+        image="https://github.com/rickyhideyukitakakura.png"
+        name="Rikao"
+        description="FrontEnd em Desenvolvimento"
+      />
+
+      <ContactInfoCard />
+
       <Card>
-        <Profile>
-          <img src="https://github.com/rickyhideyukitakakura.png" alt="" />
-          <h4>Ricky</h4>
-          <p>Frontend Developer</p>
-        </Profile>
+        <CardHeader>Tecnologias</CardHeader>
+        <CardBody>
+          <Tech />
+        </CardBody>
       </Card>
+
       <Card>
-        <ListInfo />
+        <CardHeader>Experiências</CardHeader>
+        <CardBody>
+          <CardList items={experiences} />
+        </CardBody>
       </Card>
+
       <Card>
-        <strong>Tecnologias</strong>
-        <Tech />
+        <CardHeader>Educação</CardHeader>
+        <CardBody>
+          <CardList items={educations} />
+        </CardBody>
       </Card>
-      <Card>
-        <strong>Experiências</strong>
-        <ExperienceListStyle>
-          <Experience
-            company="UTFPR"
-            project="Blockchain Simulator"
-            date="2021"
-          />
-          <Experience
-            company="UTFPR"
-            project="Ecommerce (Client)"
-            date="2021"
-          />
-          <Experience
-            company="Rocketseat"
-            project="NLW OriginSix"
-            date="2020"
-          />
-        </ExperienceListStyle>
-      </Card>
-      <Card>
-        <strong>Educação</strong>
-        <ExperienceListStyle>
-          <Experience
-            company="UTFPR"
-            project="Bacharelado em Ciência da Computação"
-            date="2018 - 2024"
-          />
-          <Experience
-            company="UFRN"
-            project="Bacharelado em Ciência e Tecnologia"
-            date="2018"
-          />
-          <Experience
-            company="OneBit Code"
-            project="Curso FullStack"
-            date="2020"
-          />
-        </ExperienceListStyle>
-      </Card>
-    </Container>
+    </S.Container>
   )
 }
